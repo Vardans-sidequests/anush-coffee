@@ -186,7 +186,7 @@
   <h2>What we collect</h2>
   <p>When you sign in with Apple, Google, or your email, we receive your email address from that provider. That email becomes your account identifier and is the only personally-identifiable thing we store about you.</p>
   <p>When you take a reading, you upload three photos of your cup. We send those photos to Anthropic's Claude API, which generates the reading text. The photos themselves are not retained after the reading is generated. Only the resulting reading text is stored, alongside your account.</p>
-  <p>With your permission, we also collect your device's Identifier for Advertisers (IDFA). This identifier is collected and stored so that we may use it in the future for analytics, advertising, or measurement purposes. You will be asked to grant or deny this permission through Apple's App Tracking Transparency prompt when you first open the app. You can change this choice at any time in your device's Settings under Privacy &amp; Security &rarr; Tracking.</p>
+  <p>With your permission, we also collect your device's Identifier for Advertisers (IDFA). This identifier is collected and stored so that we may use it in the future for analytics, advertising, or measurement purposes. You will be asked to grant or deny this permission through Apple's App Tracking Transparency prompt when you first open the app. You can change this choice at any time in your device's Settings under Privacy &amp; Security <span style="vertical-align: middle; font-size: 0.85em;">&rarr;</span> Tracking.</p>
 
   <h2>How we store it</h2>
   <p>Your readings are stored in a Supabase Postgres database. Row-level security ensures one user can never see another user's readings. Data at rest is encrypted by Supabase. Connections are HTTPS-only.</p>
