@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anush</title>
+<meta name="description" content="A small house for a 1,500-year-old practice.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='32' height='32' rx='6' fill='%23F2E8D2'/%3E%3Cg fill='none' stroke='%238B1E2F' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 11h12v5.5a5.5 5.5 0 0 1-5.5 5.5h-1a5.5 5.5 0 0 1-5.5-5.5z'/%3E%3Cpath d='M21 12.5a3 3 0 0 1 0 6'/%3E%3Cpath d='M7 24h18'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Crimson+Pro:ital,wght@0,400;0,700;1,400&family=Jura:wght@300;500&family=Noto+Serif+Armenian:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --vordan: #8B1E2F;
+    --ultra: #1E3A5F;
+    --parchment: #F2E8D2;
+    --parchment-dk: #E6D9BC;
+    --gold: #B08538;
+    --ash: #3D3A35;
+    --ash-lt: #857F75;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Crimson Pro', Georgia, serif;
+    background: var(--parchment);
+    color: var(--ash);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 24px 60px;
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* ── The Vessel (cup icon) ── */
+  .vessel {
+    margin-bottom: 48px;
+  }
+  .vessel svg {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* ── Wordmark ── */
+  .wordmark {
+    font-family: 'Italiana', serif;
+    font-size: 96px;
+    font-weight: 400;
+    color: var(--ash);
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .wordmark-armenian {
+    font-family: 'Noto Serif Armenian', serif;
+    font-size: 22px;
+    color: var(--ash-lt);
+    margin-bottom: 56px;
+    letter-spacing: 1px;
+  }
+
+  /* ── Hairline rule ── */
+  .rule {
+    width: 36px;
+    height: 1px;
+    background: var(--vordan);
+    margin: 0 auto 56px;
+  }
+
+  /* ── Headline ── */
+  .headline {
+    font-family: 'Italiana', serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--ash);
+    line-height: 1.4;
+    margin-bottom: 56px;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── Closing paragraph ── */
+  .closing {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--ash-lt);
+    margin-bottom: 56px;
+    max-width: 400px;
+  }
+
+  /* ── Interlace dots ── */
+  .interlace {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .interlace span {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--vordan);
+  }
+
+  /* ── Coming soon label ── */
+  .coming {
+    font-family: 'Jura', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    color: var(--ash-lt);
+  }
+
+  /* ── Footer ── */
+  footer {
+    padding: 32px 24px;
+    text-align: center;
+    border-top: 1px solid var(--parchment-dk);
+  }
+  footer nav {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 12px;
+  }
+  footer a {
+    font-family: 'Jura', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    color: var(--ash-lt);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  footer a:hover { color: var(--vordan); }
+  footer .email {
+    font-family: 'Crimson Pro', serif;
+    font-size: 13px;
+    color: var(--ash-lt);
+  }
+  footer .email a {
+    font-family: 'Crimson Pro', serif;
+    font-size: 13px;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--vordan);
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 600px) {
+    .wordmark { font-size: 64px; }
+    .headline { font-size: 24px; }
+    main { padding: 60px 24px 48px; }
+  }
+</style>
+</head>
+<body>
+
+<main>
+  <!-- The Vessel -->
+  <div class="vessel">
+    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#8B1E2F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M30 38h48v22a20 20 0 0 1-20 20h-8a20 20 0 0 1-20-20z"/>
+      <path d="M78 44a12 12 0 0 1 0 22"/>
+      <path d="M22 92h76"/>
+      <!-- Steam -->
+      <path d="M46 28c0-6 4-8 4-14" stroke-width="1.6" opacity="0.5"/>
+      <path d="M54 26c0-5 3-7 3-12" stroke-width="1.6" opacity="0.4"/>
+      <path d="M62 28c0-6 4-8 4-14" stroke-width="1.6" opacity="0.3"/>
+    </svg>
+  </div>
+
+  <!-- Wordmark -->
+  <h1 class="wordmark">Anush</h1>
+  <p class="wordmark-armenian">&#1329;&#1398;&#1400;&#1410;&#1399;</p>
+
+  <!-- Rule -->
+  <div class="rule"></div>
+
+  <!-- Headline -->
+  <p class="headline">A small house for a<br>1,500-year-old practice.</p>
+
+  <!-- Closing -->
+  <p class="closing">
+    For the cup at the bottom of the morning,<br>
+    the one your tatik would have read.
+  </p>
+
+  <!-- Interlace + Coming -->
+  <div class="interlace">
+    <span></span><span></span><span></span>
+  </div>
+  <p class="coming">Coming to iPhone</p>
+</main>
+
+<footer>
+  <nav>
+    <a href="/privacy.html">Privacy</a>
+    <a href="/terms.html">Terms</a>
+  </nav>
+  <p class="email"><a href="mailto:hello@anushcoffee.com">hello@anushcoffee.com</a></p>
+</footer>
+
+</body>
+</html>
