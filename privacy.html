@@ -181,11 +181,12 @@
   <h1>Privacy Policy</h1>
   <p class="effective"><strong>Effective:</strong> May 2026</p>
 
-  <p class="lede">This is a small app. The privacy of the cup matters as much as the reading itself. The shorter version of this page: we collect what we need to give you a reading and remember it later, and nothing else.</p>
+  <p class="lede">This is a small app. The privacy of the cup matters as much as the reading itself. The shorter version of this page: we collect what we need to give you a reading and remember it later, plus a device identifier if you allow it.</p>
 
   <h2>What we collect</h2>
   <p>When you sign in with Apple, Google, or your email, we receive your email address from that provider. That email becomes your account identifier and is the only personally-identifiable thing we store about you.</p>
   <p>When you take a reading, you upload three photos of your cup. We send those photos to Anthropic's Claude API, which generates the reading text. The photos themselves are not retained after the reading is generated. Only the resulting reading text is stored, alongside your account.</p>
+  <p>With your permission, we also collect your device's Identifier for Advertisers (IDFA). This identifier is collected and stored so that we may use it in the future for analytics, advertising, or measurement purposes. You will be asked to grant or deny this permission through Apple's App Tracking Transparency prompt when you first open the app. You can change this choice at any time in your device's Settings under Privacy &amp; Tracking.</p>
 
   <h2>How we store it</h2>
   <p>Your readings are stored in a Supabase Postgres database. Row-level security ensures one user can never see another user's readings. Data at rest is encrypted by Supabase. Connections are HTTPS-only.</p>
@@ -197,7 +198,10 @@
     <li><strong>Anthropic Claude API</strong> to generate readings from your photos. Claude does not retain the photos after responding.</li>
     <li><strong>Supabase</strong> to store your account and readings.</li>
   </ul>
-  <p>We do not use advertising networks, analytics platforms, or trackers of any kind. There are no cookies on this site.</p>
+  <p>We do not currently use advertising networks or analytics platforms. There are no cookies on this site. If we integrate advertising or analytics services in the future, we will update this policy and, where required, request additional consent.</p>
+
+  <h2>Device identifiers &amp; tracking</h2>
+  <p>When you first open Anush, Apple's App Tracking Transparency prompt will ask whether you allow the app to track your activity. If you grant permission, we collect and store your device's Identifier for Advertisers (IDFA). This identifier is not currently shared with any third party. If we begin using it for analytics, advertising, or measurement in the future, we will update this policy before doing so. If you deny the prompt, no device identifier is collected and the app functions identically.</p>
 
   <h2>AI processing &amp; consent</h2>
   <p>When you take a reading, the app asks for your explicit permission before sending your cup photos to Anthropic's Claude API. No photos leave your device until you consent. This consent is requested each time you initiate a reading. You may decline at any point, though a reading cannot be generated without it.</p>
@@ -209,10 +213,10 @@
   <p>You can sign out from the Settings tab in the app at any time. You can delete your account directly from the Settings tab, or by emailing <a href="mailto:hello@anushcoffee.com">hello@anushcoffee.com</a>. In either case, all your data is deleted within 30 days.</p>
 
   <h2>California residents (CCPA)</h2>
-  <p>If you are a California resident, you have the right to know what personal information we collect and how we use it, the right to request deletion of your data, and the right to not be discriminated against for exercising these rights. We do not sell personal information. We do not share personal information for cross-context behavioral advertising. To exercise any of these rights, email <a href="mailto:hello@anushcoffee.com">hello@anushcoffee.com</a>.</p>
+  <p>If you are a California resident, you have the right to know what personal information we collect and how we use it, the right to request deletion of your data, and the right to not be discriminated against for exercising these rights. We do not currently sell personal information or share it for cross-context behavioral advertising. If this changes in the future, we will update this policy and provide an opt-out mechanism as required by law. To exercise any of these rights, email <a href="mailto:hello@anushcoffee.com">hello@anushcoffee.com</a>.</p>
 
   <h2>European residents (GDPR)</h2>
-  <p>If you reside in the European Economic Area, our legal basis for processing your email address is the performance of a contract &mdash; providing you the service you signed up for. Our legal basis for processing your cup photos is your explicit consent, given each time you initiate a reading. You have the right to access, correct, or delete your personal data, to restrict or object to processing, and to data portability. To exercise any of these rights, email <a href="mailto:hello@anushcoffee.com">hello@anushcoffee.com</a>.</p>
+  <p>If you reside in the European Economic Area, our legal basis for processing your email address is the performance of a contract &mdash; providing you the service you signed up for. Our legal basis for processing your cup photos is your explicit consent, given each time you initiate a reading. Our legal basis for collecting your device identifier (IDFA) is your explicit consent, given through Apple's App Tracking Transparency prompt. You have the right to access, correct, or delete your personal data, to restrict or object to processing, and to data portability. To exercise any of these rights, email <a href="mailto:hello@anushcoffee.com">hello@anushcoffee.com</a>.</p>
 
   <h2>Data controller</h2>
   <p>Anush is developed and operated by Vardan Kirakosyan, based in the State of California, USA. For all privacy-related inquiries, contact <a href="mailto:hello@anushcoffee.com">hello@anushcoffee.com</a>.</p>
